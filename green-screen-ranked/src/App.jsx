@@ -48,7 +48,7 @@ function App() {
            required/>
           <button
             onClick={()=>{
-              searchTerm != ''?searchPlayer(searchTerm): '';
+              searchTerm != ''?searchPlayer(searchTerm.split(' ').join('')): '';
               searchTerm != ''?(document.getElementById('searchField').remove()): '';
             }}
           >Search</button>
@@ -70,7 +70,7 @@ function App() {
                 </span>
                 <span>
                   <p>Elo:</p>
-                  <h4>{playerData.elo_rate}</h4>
+                  <h4>{playerData.elo_rate != -1 ? playerData.elo_rate : 'none'}</h4>
                 </span>
                 <span>
                   <p>Best Time:</p>
@@ -84,7 +84,7 @@ function App() {
                 </span>
                 <span>
                   <p>Ranking:</p>
-                  <h4>{playerData.elo_rank}</h4>
+                  <h4>{playerData.elo_rank != null ? playerData.elo_rank : 'none'}</h4>
                 </span>
                 <span>
                   <p>W/L:</p>

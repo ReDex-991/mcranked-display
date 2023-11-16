@@ -37,13 +37,14 @@
   align-items: center;
 
 }
-
+/* input text */
 .searchField>input{
   background-color: #1f2937;
   border: none;
   padding: 10px;
   border-radius: 10px;
   color: white;
+  width: 180px;
 }
 
 .searchField>button{
