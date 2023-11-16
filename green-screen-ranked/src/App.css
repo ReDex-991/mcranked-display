@@ -1,0 +1,79 @@
+.hidden{
+  display: none;
+}
+.playerData{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: white;
+  margin-top: 50px;
+  
+}
+.playerData>img{
+  width: 15vh;
+  padding: 10px;
+}
+.firstGroup,.secondGroup{
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 30px;
+}
+.firstGroup p,.secondGroup p{
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.firstGroup h4,.secondGroup h4{
+  font-size: 1.6em;
+}
+
+.searchField{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.searchField>input{
+  background-color: #1f2937;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.searchField>button{
+  margin-left: 20px;
+  cursor: pointer;
+  background-color: #1f2937;
+  border: none;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  color: white;
+}
+.searchField>button:hover{
+  box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.603);
+}
+.blueButton{
+  margin-right: 20px;
+}
+
+.blue{
+  background-color: #150DF7;
+}
+.green{
+  background-color: #00b140;
+}
+
+@media only screen and (max-width: 800px) {
+  .firstGroup,.secondGroup{
+    flex-direction: column;
+  }
+  .playerData{
+    margin-top: 50px;
+  }
+}
