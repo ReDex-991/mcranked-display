@@ -16,20 +16,17 @@ function App() {
   const searchPlayer = async (name) =>{
     const response = await fetch(`${API_URL}${name}`);
     const data = await response.json();
-    
-
-    setPlayerData(data.data);
-    
   
+    setPlayerData(data.data);
+    console.log(data);
+
   }
   useEffect(()=>{
     searchPlayer('feinberg');
   },[]);
-
   return (
     <>
         {/* input field */}
-
         <div className="searchField" id='searchField'>
           {/* for bule skin makes the bg blue*/}
           <button className='blueButton' id='bgBtn'
@@ -91,12 +88,11 @@ function App() {
                   <h4>{playerData.records[2].win}-{playerData.records[2].lose}</h4>
                 </span>
               </div>
-              
             </>
           )
           }
         </div>
-    </>
+    </> 
   )
 }
 
