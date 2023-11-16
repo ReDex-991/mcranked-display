@@ -3,7 +3,7 @@ has been thought to use it as overlay on stream
 you can change between a green and blue screen in base of the skin
 and search for a player name 
 
-if you wanna use it on stream just add a browser source --> <a href='https://stupendous-souffle-bd0936.netlify.app/'>this link</a>
+if you wanna use it on stream just add a browser source --> [this link](https://mcsrrankdisplay.netlify.app)
 --> interact, and add your name 
 
 for now its a beta, it works but it needs some adjustements
