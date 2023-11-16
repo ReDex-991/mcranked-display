@@ -6,4 +6,6 @@ and search for a player name
 if you wanna use it on stream just add a browser source --> <a href='https://stupendous-souffle-bd0936.netlify.app/'>this link</a>
 --> interact, and add your name 
 
-:) 
+for now its a beta, it works but it needs some adjustements
+
+tnx :) 
