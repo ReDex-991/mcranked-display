@@ -8,4 +8,6 @@ if you wanna use it on stream just add a browser source --> <a href='https://stu
 
 for now its a beta, it works but it needs some adjustements
 
+i used the MCSR ranked API [link](https://github.com/MCSR-Ranked)
+
 tnx :) 
