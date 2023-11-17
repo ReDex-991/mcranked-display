@@ -18,7 +18,7 @@ function App() {
     const data = await response.json();
   
     setPlayerData(data.data);
-    console.log(data);
+
 
   }
   useEffect(()=>{
