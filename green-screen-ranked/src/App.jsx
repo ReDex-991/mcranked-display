@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import { inject } from '@vercel/analytics';
 import './App.css'
 
 const API_URL = 'https://mcsrranked.com/api/users/'
@@ -95,5 +96,5 @@ function App() {
     </> 
   )
 }
-
+inject();
 export default App
