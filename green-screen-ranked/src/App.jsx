@@ -10,20 +10,18 @@ function millisToMinAndSec(millis) {
 }
 
 function App() {
-  const [playerData,setPlayerData] = useState();
+  const [playerData,setPlayerData] = useState([]);
   const [searchTerm, setsearchPlayer] = useState('');
+
+  // update the board every 15 minutes
+  setInterval(() => {searchTerm==''? '':searchPlayer(searchTerm)}, 900000)
 
   const searchPlayer = async (name) =>{
     const response = await fetch(`${API_URL}${name}`);
     const data = await response.json();
-  
     setPlayerData(data.data);
 
-
   }
-  useEffect(()=>{
-    searchPlayer('feinberg');
-  },[]);
   return (
     <>
         {/* input field */}
@@ -45,7 +43,7 @@ function App() {
            required/>
           <button
             onClick={()=>{
-              searchTerm != ''?searchPlayer(searchTerm.split(' ').join('')): '';
+              searchTerm != '' ?searchPlayer(searchTerm.split(' ').join('').replace(/</g, "&lt;").replace(/>/g, "&gt;")): '';
               searchTerm != ''?(document.getElementById('searchField').remove()): '';
             }}
           >Search</button>
@@ -53,12 +51,9 @@ function App() {
         {/* display player data */}
         <div className="playerData">
           {
-          (playerData == null)
-          ?
-          (<h1>invalid player</h1>)
-          :
-          (
-            <>
+          (playerData == null || playerData.records == null || playerData.data == "Too many requests" )?
+          (<h1>none</h1>):
+          (<>
               <img src={`https://minotar.net/helm/${playerData.nickname}`} alt="" />
               <div className='firstGroup'> 
                 <span>
@@ -89,8 +84,7 @@ function App() {
                 </span>
               </div>
             </>
-          )
-          }
+          )}
         </div>
     </> 
   )
